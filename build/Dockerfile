@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.source = "https://github.com/duttgatiganti/Python
 
 ARG srcDir=src
 WORKDIR /app
-COPY $srcDir/requirements.txt .
+COPY src/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY $srcDir/run.py .
